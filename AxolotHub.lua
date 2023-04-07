@@ -1,6 +1,8 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Axolot Hub", "Sentinel")
 
+-- The Script Works Only Break In Story
+
 -- Give Roles
 
 local Tab = Window:NewTab("Give Roles")
@@ -71,7 +73,7 @@ end)
 
 
 
-MainSection:NewButton("Turn On Basement Light", "Turn on Basement ligh Cat", function()
+MainSection:NewButton("Turn On Basement Light", "Turn ons Basement light", function()
         local Event = game:GetService("ReplicatedStorage").RemoteEvents.BasementMission
         Event:FireServer()
 end)
@@ -122,10 +124,9 @@ Section:NewButton("Bat", "Gives You Bat ", function()
         Event:FireServer(A_1, A_2)
 end)
 
-Section:NewButton("", "Gives You ", function()
+Section:NewButton("Crowbar {Coming Soon}", "Gives You Crowbar", function()
         
 end)
-
 
 
 
@@ -146,7 +147,7 @@ PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(
 
 PlayerSection:NewButton("Drown Yourself", "Drowing Yourself", function()
         local A_1 = 1
-        local A_2 = game:GetService("Players").hyttfggfthfgfhw
+        local A_2 = game:GetService("Players").hyttfggfthfgfhw -- Your Roblox Name Here!
         local Event = game:GetService("ReplicatedStorage").RemoteEvents.ToxicDrown
         Event:FireServer(A_1, A_2)
 end)
