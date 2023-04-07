@@ -75,6 +75,11 @@ MainSection:NewButton("Turn On Basement Light", "Turn ons Basement light", funct
         Event:FireServer()
 end)
 
+Section:NewButton("Open The Front Door", "Opening The Front Door", function()
+          local A_1 = "\70\114\111\110\116"
+          local Event = game:GetService("ReplicatedStorage").RemoteEvents.Door
+          Event:FireServer(A_1)
+end)
 
 
 
