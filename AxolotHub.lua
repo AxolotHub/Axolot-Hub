@@ -149,7 +149,7 @@ PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(
 
 PlayerSection:NewButton("Drown Yourself", "Drowing Yourself", function()
         local A_1 = 1
-        local A_2 = game:GetService("Players").YourNameHere!
+        local A_2 = game:GetService("Players").YourNameHere
         local Event = game:GetService("ReplicatedStorage").RemoteEvents.ToxicDrown
         Event:FireServer(A_1, A_2)
 end)
