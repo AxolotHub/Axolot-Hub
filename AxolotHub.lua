@@ -127,7 +127,10 @@ Section:NewButton("Bat", "Gives You Bat ", function()
 end)
 
 Section:NewButton("Crowbar {Coming Soon}", "Gives You Crowbar", function()
-        
+          local A_1 = true
+          local A_2 = "\67\114\111\119\98\97\114"
+          local Event = game:GetService("ReplicatedStorage").RemoteEvents.BasementWeapon
+          Event:FireServer(A_1, A_2)
 end)
 
 
