@@ -126,7 +126,7 @@ Section:NewButton("Bat", "Gives You Bat ", function()
         Event:FireServer(A_1, A_2)
 end)
 
-Section:NewButton("Crowbar {Coming Soon}", "Gives You Crowbar", function()
+Section:NewButton("Crowbar", "Gives You Crowbar", function()
           local A_1 = true
           local A_2 = "\67\114\111\119\98\97\114"
           local Event = game:GetService("ReplicatedStorage").RemoteEvents.BasementWeapon
