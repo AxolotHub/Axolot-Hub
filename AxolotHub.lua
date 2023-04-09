@@ -56,12 +56,27 @@ Section:NewButton("The Medic", "Gives Role The Medic", function()
         Event:FireServer(A_1, A_2, A_3)
 end)
 
+Section:NewButton("The Officer", "Gives Role The Officer", function()
+        local A_1 = "Gun"
+        local A_2 = false
+        local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
+        Event:FireServer(A_1, A_2)
+end)
+
+Section:NewButton("The Swat", "Gives Role The Swat", function()
+        local A_1 = "SwatGun"
+        local A_2 = true
+        local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
+        Event:FireServer(A_1, A_2)
+end)
 -- home page
 
 local Tab = Window:NewTab("home")
 local Section = Tab:NewSection("Added Teleports Page")
 local Section = Tab:NewSection("Added Credits Page")
 local Section = Tab:NewSection("Added Open The Front Door")
+local Section = Tab:NewSection("Added Role The Swat")
+local Section = Tab:NewSection("Added Role The Officer")
 
 -- Main
 
