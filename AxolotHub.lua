@@ -56,6 +56,13 @@ Section:NewButton("The Medic", "Gives Role The Medic", function()
         Event:FireServer(A_1, A_2, A_3)
 end)
 
+-- home page
+
+local Tab = Window:NewTab("home")
+local Section = Tab:NewSection("Added Teleports Page")
+local Section = Tab:NewSection("Added Credits Page")
+local Section = Tab:NewSection("Added Open The Front Door")
+
 -- Main
 
 local Main = Window:NewTab("Main")
@@ -75,7 +82,7 @@ MainSection:NewButton("Turn On Basement Light", "Turn ons Basement light", funct
         Event:FireServer()
 end)
 
-Section:NewButton("Open The Front Door", "Opening The Front Door", function()
+MainSection:NewButton("Open The Front Door", "Opening The Front Door", function()
           local A_1 = "\70\114\111\110\116"
           local Event = game:GetService("ReplicatedStorage").RemoteEvents.Door
           Event:FireServer(A_1)
@@ -133,11 +140,33 @@ Section:NewButton("Crowbar", "Gives You Crowbar", function()
           Event:FireServer(A_1, A_2)
 end)
 
+-- Teleports
 
+local Tab = Window:NewTab("Teleports")
+local Section = Tab:NewSection("Teleports")
 
+Section:NewButton("House", "Teleports You Home", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25.7227211, 3.56590199, -211.244629, -0.998736382, 7.54303553e-09, 0.0502559841, 6.59268062e-09, 1, -1.90760421e-08, -0.0502559841, -1.87206162e-08, -0.998736382)
+end)
 
+Section:NewButton("Store", "Teleports You Store", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-422, 4.50004387, -121, 1, -3.5507528e-09, 3.94502546e-14, 3.5507528e-09, 1, -1.20894574e-08, -3.9407327e-14, 1.20894574e-08, 1)
+end)
 
+Section:NewButton("Basament", "Teleports You Basament", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(68.1098938, -14.0340815, -161.126022, 0.994722664, 5.84306896e-08, -0.10260009, -5.27673727e-08, 1, 5.79121178e-08, 0.10260009, -5.21925578e-08, 0.994722664)
+end)
 
+Section:NewButton("Living Room", "Teleports You Living Room", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12, 3.56590176, -219, 1, 2.17110578e-08, 3.16424973e-13, -2.17110578e-08, 1, 7.39103783e-08, -3.148203e-13, -7.39103783e-08, 1)
+end)
+
+Section:NewButton("Hiding Spot", "Teleports You Hiding Spot", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-43, 3.56590199, -224, 1, 1.21503649e-11, -8.56855475e-09, -1.21498219e-11, 1, 6.33696047e-08, 8.56855475e-09, -6.33696047e-08, 1)
+end)
+
+local Section = Tab:NewSection("We Will Add More Soon!")
+-- Player
 
 local Player = Window:NewTab("Player")
 local PlayerSection = Player:NewSection("Player")
@@ -163,3 +192,8 @@ local Section = Tab:NewSection("Extras")
 Section:NewButton("Infinte Yield", "Executes Infinte Yield", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)
+
+-- Credits
+
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("What Do I Add Here?!")v
