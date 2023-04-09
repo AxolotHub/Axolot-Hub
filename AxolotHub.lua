@@ -196,4 +196,4 @@ end)
 -- Credits
 
 local Tab = Window:NewTab("Credits")
-local Section = Tab:NewSection("What Do I Add Here?!")v
+local Section = Tab:NewSection("What Do I Add Here?!")
